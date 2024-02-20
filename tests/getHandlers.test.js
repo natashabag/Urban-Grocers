@@ -32,7 +32,7 @@ test("working hours shown for all deliveries", async () => {
   } catch (error) {
     console.error(error);
   }
-  dataDelivery = responseBodyHours.json();
+  let dataDelivery = responseBodyHours.json();
   const result = [];
   for (let i = 0; i < dataDelivery.length; i++) {
     if ("workingHours") result.push(true);
