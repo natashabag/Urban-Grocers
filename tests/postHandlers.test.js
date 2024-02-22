@@ -5,7 +5,7 @@ const requestBody = {
   ids: [1, 4, 44],
 };
 // TEST 1 - RESPONSE STATUS
-test("response status 200 when checking the quantity of goods", async () => {
+test("Should show 200 code when checking the quantity of goods", async () => {
   let actualStatus;
   try {
     const response = await fetch(`${config.API_URL}/api/v1/warehouses/amount`, {
@@ -23,7 +23,7 @@ test("response status 200 when checking the quantity of goods", async () => {
 });
 
 // TEST 2 - RESPONSE BODY - STORES
-test("goods shown for all four stores", async () => {
+test("Should show all four stores in JSON response body", async () => {
   let response;
   try {
     response = await fetch(`${config.API_URL}/api/v1/warehouses/amount`, {
@@ -48,7 +48,7 @@ const requestBodyDelivery = {
   productsWeight: 11,
 };
 
-test("min delivery time is less then max delivery time", async () => {
+test("Should display that max delivery time is biger than min delivery time", async () => {
   let responseDelivery;
   try {
     responseDelivery = await fetch(`${config.API_URL}/speedy/v1/calculate`, {

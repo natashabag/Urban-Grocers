@@ -18,7 +18,7 @@ const requestBodyCart = {
   ],
 };
 //TEST 1 - RESPONSE STATUS
-test("status should be 200 when deleting a cart", async () => {
+test("Should show 200 code when deleting a cart", async () => {
   let actualStatus;
   try {
     //CREATING A SHOPPING CART
@@ -30,7 +30,7 @@ test("status should be 200 when deleting a cart", async () => {
       body: JSON.stringify(requestBodyCart),
     });
     const cart = await responseCart.json();
-    const cartID = cart["id"];
+    let cartID = cart["id"];
     //TESTING DELETE REQUEST STATUS
     const response = await fetch(`${config.API_URL}/api/v1/orders/${cartID}`, {
       method: "DELETE",
@@ -43,7 +43,7 @@ test("status should be 200 when deleting a cart", async () => {
 });
 
 //TEST-2 RESPONSE BODY
-test("request body is ok: true", async () => {
+test(`Should be a {"ok": true} JSON response to deleting the cart`, async () => {
   let responseBody;
   try {
     //CREATING A SHOPPING CART
@@ -55,7 +55,7 @@ test("request body is ok: true", async () => {
       body: JSON.stringify(requestBodyCart),
     });
     const cart = await responseCart.json();
-    const cartID = cart["id"];
+    let cartID = cart["id"];
     //TESTING DELETE REQUEST STATUS
     responseBody = await fetch(`${config.API_URL}/api/v1/orders/${cartID}`, {
       method: "DELETE",

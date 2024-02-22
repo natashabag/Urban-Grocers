@@ -6,7 +6,7 @@ const requestBodyPrice = {
   price: 15,
 };
 
-test("status should be 200 changing price", async () => {
+test("Should show 200 code when changing price", async () => {
   let actualStatus;
   try {
     const response = await fetch(`${config.API_URL}/api/v1/products/6`, {
@@ -49,7 +49,7 @@ const requestBodyCart = {
   ],
 };
 
-test("UPDATE status should be 200 when adding groceries", async () => {
+test("Should show 200 code when adding groceries", async () => {
   let actualStatus;
   try {
     //CREATING A SHOPPING CART
@@ -61,7 +61,7 @@ test("UPDATE status should be 200 when adding groceries", async () => {
       body: JSON.stringify(requestBodyCart),
     });
     const cart = await responseCart.json();
-    const cartID = cart["id"];
+    let cartID = cart["id"];
     //TESTING PUT REQUEST
     const response = await fetch(`${config.API_URL}/api/v1/orders/${cartID}`, {
       method: "PUT",
@@ -80,7 +80,7 @@ test("UPDATE status should be 200 when adding groceries", async () => {
 //COMMENT TO THE PREVIOUS TEST: A product will be added to the order and response status code "200 OK" will be shown if the product we are trying to add is available in the warehouse that we have been assigned to after creating the order. However, it will show an error if the product is available in other warehouses. KNOWN BUG https://nataliabagramian.atlassian.net/browse/NBP4-11
 
 // TEST 3 - RESPONSE BODY - PRICE
-test("final price should be more than 0", async () => {
+test("Should have finalCost more than 0 in JSON response body", async () => {
   let finalCost;
   try {
     //CREATING A SHOPPING CART
@@ -92,7 +92,7 @@ test("final price should be more than 0", async () => {
       body: JSON.stringify(requestBodyCart),
     });
     const cart = await responseCart.json();
-    const cartID = cart["id"];
+    let cartID = cart["id"];
     //PUT REQUEST
     const response = await fetch(`${config.API_URL}/api/v1/orders/${cartID}`, {
       method: "PUT",
