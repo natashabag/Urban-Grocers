@@ -1,10 +1,6 @@
-# Urban Grocers Web API Testing (JavaScript + Jest)
+# Urban Grocers Web API Testing (JavaScript + Jest) 🛒🥑
 
-Urban Grocers API testing
-
-# Description
-
-This project is design to test Urban Grocers API to ensure accuracy of response statuses and response bodies. 
+This project is designed to test Urban Grocers API to ensure accuracy of response statuses and response bodies. 
 
 # Test Coverage:
 ## DELETE REQUESTS:
