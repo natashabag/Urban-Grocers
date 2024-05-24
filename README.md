@@ -4,11 +4,11 @@
 
 ## Test Coverage:
 <b> DELETE REQUESTS:</b>
-Should show 200 code when deleting a cart
-Should be a {"ok": true} JSON response to deleting the cart
+1. Should show 200 code when deleting a cart
+2. Should be a {"ok": true} JSON response to deleting the cart
 <b> GET REQUESTS:</b>
-Should show 200 code when getting the list of deliveries
-Should have 4 delivery services
+1. Should show 200 code when getting the list of deliveries
+2. Should have 4 delivery services
 <b> POST REQUESTS:</b>
 Should show 200 code when checking the quantity of goods
 Should show all four stores in JSON response body
