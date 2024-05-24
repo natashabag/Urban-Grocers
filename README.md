@@ -4,19 +4,19 @@
 
 ## Test Coverage:
 <b> DELETE REQUESTS:</b>
-1. Should show 200 code when deleting a cart
-2. Should be a {"ok": true} JSON response to deleting the cart
+  Should show 200 code when deleting a cart
+  Should be a {"ok": true} JSON response to deleting the cart
 <b> GET REQUESTS:</b>
-1. Should show 200 code when getting the list of deliveries
-2. Should have 4 delivery services
+  Should show 200 code when getting the list of deliveries
+  Should have 4 delivery services
 <b> POST REQUESTS:</b>
-Should show 200 code when checking the quantity of goods
-Should show all four stores in JSON response body
-Should display that max delivery time is biger than min delivery time
+  Should show 200 code when checking the quantity of goods
+  Should show all four stores in JSON response body
+  Should display that max delivery time is biger than min delivery time
 <b> PUT REQUESTS:</b>
-Should show 200 code when changing price
-Should show 200 code when adding groceries
-Should have finalCost more than 0 in JSON response body
+  Should show 200 code when changing price
+  Should show 200 code when adding groceries
+  Should have finalCost more than 0 in JSON response body
 
 # Documentation source used
 apiDoc, Swagger
